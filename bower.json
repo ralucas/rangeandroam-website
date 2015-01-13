@@ -1,0 +1,23 @@
+{
+  "name": "rangeandroam",
+  "version": "0.0.0",
+  "authors": [
+    "R.A. Lucas <richard@richardalucas.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.2.0",
+    "jquery": "~2.1.1",
+    "font-awesome": "~4.2.0",
+    "gsap": "~1.14.1",
+    "ScrollMagic": "~1.2.2"
+  }
+}
