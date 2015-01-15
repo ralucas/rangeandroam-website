@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -15,8 +16,10 @@
     <!-- Font Awesome CSS -->
     <link href="bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <!-- Custom styles for this template -->
-    <link href="css/main.css" rel="stylesheet">
-    <!--[if lt IE 9]-->
+    <link href="css/main.min.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
     <script src="assets/ie-emulation-modes-warning.js"></script>
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -29,20 +32,22 @@
   <body>
 
     <div class="site-wrapper">
-      <!-- Header -->
-      <div class="masthead clearfix">
-        <div class="inner">
-          <h3 class="masthead-brand">Range & Roam</h3>
-          <ul class="nav masthead-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#projects">Sample Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-      </div>
-      <!-- Section One -->
-      <section id="section-one" class="site-wrapper-inner">
+
+      <div class="site-wrapper-inner">
+
         <div class="cover-container">
+
+          <div class="masthead clearfix">
+            <div class="inner">
+              <h3 class="masthead-brand">Range & Roam</h3>
+              <ul class="nav masthead-nav">
+                <li class="active"><a href="#">Home</a></li>
+<!--                 <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li> -->
+              </ul>
+            </div>
+          </div>
+
           <div class="inner cover">
             <h1 class="cover-heading">Range & Roam</h1>
             <p class="lead">Full Stack Web Development Consulting with Node.js</p>
@@ -62,16 +67,13 @@
               <p>Contact me: <a href="mailto:richard@rangeandroam.com">richard@rangeandroam.com</a></p>
             </div>
           </div>
+          
         </div>
-      </section>
-      <!-- Section Two -->
-      <section id="section-two">
-        <div class="cover-container">
-          <div class="inner cover">
-          </div>
-        </div>
-      </section>
+
+      </div>
+
     </div>
+
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
@@ -90,7 +92,5 @@
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="assets/ie10-viewport-bug-workaround.js"></script>
-    <script type="text/javascript" src="bower_components/gsap/TweenMax.min.js"></script>
-    <script type="text/javascript" src="bower_components/ScrollMagic/js/jquery.scrollmagic.min.js"></script>
   </body>
 </html>
