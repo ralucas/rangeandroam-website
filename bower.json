@@ -19,5 +19,8 @@
     "font-awesome": "~4.2.0",
     "gsap": "~1.14.1",
     "ScrollMagic": "~1.2.2"
+  },
+  "resolutions": {
+    "jquery": "~2.1.1"
   }
 }
