@@ -6,18 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
+    <link rel="icon" href="images/rr.ico">
 
     <title>Range & Roam</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="bower_components/materialize/dist/css/materialize.min.css" rel="stylesheet">
     <!-- Font Awesome CSS -->
     <link href="bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="css/main.css" rel="stylesheet">
+
     <!--[if lt IE 9]-->
-    <script src="assets/ie-emulation-modes-warning.js"></script>
+    <script src="js/ie-emulation-modes-warning.js"></script>
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -27,59 +28,160 @@
   </head>
 
   <body>
-
-    <div class="site-wrapper">
-      <!-- Header -->
-      <div class="masthead clearfix">
-        <div class="inner">
-          <h3 class="masthead-brand">Range & Roam</h3>
-          <ul class="nav masthead-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
+    <nav class="blue-grey" role="navigation">
+      <div class="container">
+        <div class="nav-wrapper">
+          <a id="logo-container" href="#" class="brand-logo thin">Range & Roam</a>
+          <ul id="nav-mobile" class="right side-nav">
+            <li><a class="" href="#about">About</a></li>
+            <li><a class="" href="#contact">Contact</a></li>
+          </ul><a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
         </div>
       </div>
-      <!-- Section One -->
-      <section id="section-one" class="site-wrapper-inner">
-        <div class="cover-container">
-          <div class="inner cover">
-            <h1 class="cover-heading">Range & Roam</h1>
-            <p class="lead">Full Stack Web Development Consulting with Node.js</p>
-            <p class="lead">
-              <a href="#projects">Sample Projects</a>
-            </p>
+    </nav>
+
+    <div id="index-banner" class="parallax-container">
+      <div class="section no-pad-bot">
+        <div class="container">
+          <br><br>
+          <h1 class="header center black-text">Range & Roam</h1>
+          <div class="row center">
+            <h5 class="header col s12 black-text light">Node.js Consulting and Full Stack Web Development</h5>
           </div>
-          <br>
-          <div class="mastfoot">
-            <div class="inner">
-              <p>Contact us: <a href="mailto:richard@rangeandroam.com">richard@rangeandroam.com</a>  -or- <a href="mailto:daniel@rangeandroam.com">daniel@rangeandroam.com</a></p>
+          <div class="row center">
+            <a href="mailto:info@rangeandroam.com" class="btn-large waves-effect waves-light blue-grey">Contact Us <i class="mdi-content-send right"></i></a>
+          </div>
+          <br><br>
+
+        </div>
+      </div>
+      <div class="parallax"><img src="images/flatirons.jpg" alt="Unsplashed background img 2"></div>
+    </div>
+
+
+    <div class="container">
+      <div class="section">
+
+        <!--   Icon Section   -->
+        <div class="row">
+          <div class="col s12 m4">
+            <div class="icon-block">
+              <h2 class="center blue-grey-text"><i class="mdi-image-flash-on"></i></h2>
+              <h5 class="center">Development Team</h5>
+              <p class="light">The development team brings years of full stack web development experience. The team includes leaders in the tech community, focused on web development, and open source contributing.</p>
             </div>
-            <div class="more">
-              <ul class="icons">
-                  <li><a href="https://github.com/ralucas" target="_blank"><i class="fa fa-github fa-3x"></i></a></li>
-                  <li><a href="https://twitter.com/r_a_lucas" target="_blank"><i class="fa fa-twitter fa-3x"></i></a></li>
-                  <li><a href="http://www.linkedin.com/in/richardalucas" target="_blank"><i class="fa fa-linkedin fa-3x"></i></a></li>
-                  <li><a href="mailto:richard@rangeandroam.com"><i class="fa fa-envelope fa-3x"></i></a></li>
+          </div>
+
+          <div class="col s12 m4">
+            <div class="icon-block">
+              <h2 class="center blue-grey-text"><i class="mdi-social-group"></i></h2>
+              <h5 class="center">Customer Service Focused</h5>
+
+              <p class="light">By focusing on you and your needs, Range & Roam can tailor a specific solution. Testing is a priority, making maintainability simpler. We work with you to complete the project on-time and within budget.</p>
+            </div>
+          </div>
+
+          <div class="col s12 m4">
+            <div class="icon-block">
+              <h2 class="center blue-grey-text"><i class="mdi-action-settings"></i></h2>
+              <h5 class="center">Modern Web Development</h5>
+
+              <p class="light">Utilizes such modern web development techniques:</p>
+              <ul class="bulleted">
+                <li class="light">Responsive Web Design</li>
+                <li class="light">Agile Methodology</li>
+                <li class="light">Frameworks such as Node.js, Angularjs, Phonegap</li>
               </ul>
             </div>
           </div>
         </div>
-      </section>
-      <!-- Section Two -->
-      <section id="section-two">
-        <div class="cover-container">
-          <div class="inner cover">
+      </div>
+    </div>
+
+    <div class="parallax-container valign-wrapper">
+      <div class="section no-pad-bot">
+        <div class="container">
+          <div class="row center">
+            <h5 class="col s12 light add-white-shadow">Application Development from Inception to Deployment</h5>
           </div>
         </div>
-        <div style="height:1050px"></div>
-         <div id="projects">
-         here is a huge list of projects
-         </div>
-        <div style="height:1050px"></div>
-      </section>
+      </div>
+      <div class="parallax"><img src="images/server-room.jpg" alt="Unsplashed background img 2"></div>
     </div>
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
+
+    <div class="container">
+      <div class="section">
+
+        <div class="row" id="contact">
+          <div class="col s12 center">
+            <h3><i class="mdi-content-send blue-grey-text"></i></h3>
+            <h4>Contact Us</h4>
+            <p class="light">Contact us: 
+              <a class="email-address" href="mailto:richard@rangeandroam.com">richard@rangeandroam.com</a>  -or- 
+              <a class="email-address" href="mailto:daniel@rangeandroam.com">daniel@rangeandroam.com</a>
+            </p>
+            <div>
+              <ul class="icons">
+                <li>
+                  <a href="https://github.com/ralucas" target="_blank">
+                    <i class="fa fa-github fa-3x"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://twitter.com/r_a_lucas" target="_blank">
+                    <i class="fa fa-twitter fa-3x"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="http://www.linkedin.com/in/richardalucas" target="_blank">
+                    <i class="fa fa-linkedin fa-3x"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="mailto:richard@rangeandroam.com">
+                    <i class="fa fa-envelope fa-3x"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <div class="parallax-container valign-wrapper">
+      <div class="section no-pad-bot">
+        <div class="container">
+          <div class="row center">
+            <h5 class="col s12 light white-text add-gray-shadow">Utilizing modern web and mobile technologies and techniques</h5>
+          </div>
+        </div>
+      </div>
+      <div class="parallax"><img src="images/code.jpg" alt="Unsplashed background img 3"></div>
+    </div>
+
+    <footer class="page-footer blue-grey">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text center">Company Bio</h5>
+            <p class="grey-text text-lighten-2">Node.js Consulting and Full Stack Web Development service firm. Utilizes modern web and mobile technologies and techniques, handling all aspects of development, from product conception and development to deployment and continued product lifecycle management.</p>
+          </div>
+          <div class="col l6 s12 valign-wrapper">
+            <a class="valign" href="http://nodejs.org"><img src="images/nodejs-175.png"></a>
+            <a class="valign" href="http://angularjs.org"><img src="images/angularjs.png"></a>
+            <a class="valign" href="http://phonegap.com"><img src="images/phonegap.png"></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+        Made in Colorado with <i class="fa fa-heart red-text"></i> by <a class="brown-text text-lighten-3" href="#">Range & Roam</a>
+        </div>
+      </div>
+    </footer>
     <!-- Placed at the end of the document so the pages load faster -->
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -93,10 +195,9 @@
     </script>
     
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="bower_components/materialize/dist/js/materialize.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="assets/ie10-viewport-bug-workaround.js"></script>
-    <script type="text/javascript" src="bower_components/gsap/TweenMax.min.js"></script>
-    <script type="text/javascript" src="bower_components/ScrollMagic/js/jquery.scrollmagic.min.js"></script>
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
   </body>
 </html>
