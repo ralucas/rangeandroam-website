@@ -1,7 +1,42 @@
 module.exports = function(grunt) {
 
+  require('load-grunt-tasks')(grunt);
+
   grunt.initConfig({
+
     pkg: grunt.file.readJSON('package.json'),
+
+    useminPrepare: {
+      html: 'html/index.html',
+      options: {
+        dest: './dist',
+        root: './dist'
+      }
+    },
+    clean: ['dist'],
+    copy: {
+      main: {
+        files: [ {
+          src: 'html/index.html',
+          dest: 'dist/index.html'
+        }, {
+          expand: true,
+          flatten: true,
+          src: 'bower_components/font-awesome/fonts/*',
+          dest: 'dist/fonts'
+        }, {
+          expand: true,
+          flatten: true,
+          src: 'bower_components/materialize/font/material-design-icons/**',
+          dest: 'dist/font/material-design-icons/'
+        }, {
+          expand: true,
+          flatten: true,
+          src: 'bower_components/materialize/font/roboto/**',
+          dest: 'dist/font/roboto/'
+        }]
+      }
+    },
     cssmin: {
       options: {
         banner: '/* Minified CSS File - <%= grunt.template.today("yyyy-mm-dd") %> */'
@@ -14,19 +49,20 @@ module.exports = function(grunt) {
         ext: '.min.css'
       }
     },
-    // imagemin: {
-    //   dynamic: {
-    //     options: {
-    //       optimizationLevel: 3
-    //     },
-    //     files: [{
-    //       expand: true,
-    //       cwd: 'images/src/',
-    //       src: '**/*.png',
-    //       dest: 'images/dist/'
-    //     }]
-    //   }
-    // },
+    
+    imagemin: {
+      dynamic: {
+        options: {
+          optimizationLevel: 3
+        },
+        files: [{
+          expand: true,
+          cwd: 'images',
+          src: ['*.{png,jpg,jpeg,gif}'],
+          dest: 'dist/images'
+        }]
+      }
+    },
     'ftp-deploy': {
       build: {
         auth: {
@@ -34,17 +70,23 @@ module.exports = function(grunt) {
           port: 21,
           authKey: 'key'
         },
-        src: '/Users/richardlucas/Projects/rangeandroam',
-        dest: '/public_html',
-        exclusions: ['/Users/richardlucas/Projects/rangeandroam/**/.DS_Store',
-          '/Users/richardlucas/Projects/rangeandroam/images/src',
-          '/Users/richardlucas/Projects/rangeandroam/css/main.css',
-          '/Users/richardlucas/Projects/rangeandroam/Gruntfile.js',
-          '/Users/richardlucas/Projects/rangeandroam/node_modules',
-          '/Users/richardlucas/Projects/rangeandroam/.ftppass',
-          '/Users/richardlucas/Projects/rangeandroam/package.json',
-          '/Users/richardlucas/Projects/rangeandroam/README.md',
-          '/Users/richardlucas/Projects/rangeandroam/.git']
+        src: '/Users/richardlucas/Projects/rangeandroam-website/dist/',
+        dest: '/var/www/html/',
+      }
+    },
+    filerev: {
+      options: {
+        algorithm: 'md5',
+        length: 16
+      },
+      js: {
+        src: 'dist/js/main.min.js'
+      }
+    },
+    usemin: {
+      html: 'dist/index.html',
+      options: {
+        assetsDirs: ['dist']
       }
     },
     gitcommit: {
@@ -59,14 +101,18 @@ module.exports = function(grunt) {
     }
   });
   
-  grunt.loadNpmTasks('grunt-contrib-cssmin');
-  grunt.loadNpmTasks('grunt-contrib-imagemin');
-  grunt.loadNpmTasks('grunt-ftp-deploy');
-  grunt.loadNpmTasks('grunt-git');
+  grunt.registerTask('build', [
+    'useminPrepare',
+    'concat:generated',
+    'cssmin:generated',
+    'uglify:generated',
+    'filerev',
+    'copy',
+    'usemin',
+    'imagemin'
+  ]);
 
-  grunt.registerTask('build', ['cssmin']);
+  grunt.registerTask('deploy', ['build', 'ftp-deploy']);
 
-  grunt.registerTask('deploy', ['ftp-deploy']);
-
-  grunt.registerTask('default', ['build', 'deploy']);
+  grunt.registerTask('default', ['build']);
 };

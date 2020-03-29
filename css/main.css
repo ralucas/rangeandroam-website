@@ -16,8 +16,14 @@
   color: #556C40;
 }
 
-.add-white-shadow {
-  text-shadow: 1px 1px white;
+.add-text-border {
+  color: #fff;
+  -webkit-text-fill-color: white;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black;
+  font-size: 2.64rem;
+  line-height: 2.804rem;
+  font-weight: 500;
 }
 
 .add-gray-shadow {
@@ -34,4 +40,16 @@
 
 footer.page-footer {
   margin-top: 0;
+}
+
+.logos {
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.logos img {
+  height: 60px;
+  padding: 5px;
 }
