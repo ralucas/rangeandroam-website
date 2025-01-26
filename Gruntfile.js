@@ -7,33 +7,33 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
 
     useminPrepare: {
-      html: 'html/index.html',
+      html: 'src/index.html',
       options: {
         dest: './dist',
-        root: './dist'
+        root: './src'
       }
     },
     clean: ['dist'],
     copy: {
       main: {
         files: [ {
-          src: 'html/index.html',
+          src: 'src/index.html',
           dest: 'dist/index.html'
         }, {
           expand: true,
           flatten: true,
-          src: 'bower_components/font-awesome/fonts/*',
-          dest: 'dist/fonts'
-        }, {
-          expand: true,
-          flatten: true,
-          src: 'bower_components/materialize/font/material-design-icons/**',
-          dest: 'dist/font/material-design-icons/'
-        }, {
-          expand: true,
-          flatten: true,
-          src: 'bower_components/materialize/font/roboto/**',
-          dest: 'dist/font/roboto/'
+          src: 'node_modules/@fortawesome/fontawesome-free/webfonts/*',
+          dest: 'dist/webfonts'
+        // }, {
+        //   expand: true,
+        //   flatten: true,
+        //   src: 'node_modules/materialize-css/font/material-design-icons/**',
+        //   dest: 'dist/font/material-design-icons/'
+        // }, {
+        //   expand: true,
+        //   flatten: true,
+        //   src: 'node_modules/materialize-css/font/roboto/**',
+        //   dest: 'dist/font/roboto/'
         }]
       }
     },
@@ -43,13 +43,12 @@ module.exports = function(grunt) {
       },
       minify: {
         expand: true,
-        cwd: '',
-        src: 'css/*.css',
-        dest: '',
+        cwd: 'src/css',
+        src: ['*.css'],
+        dest: 'dist/css',
         ext: '.min.css'
       }
     },
-    
     imagemin: {
       dynamic: {
         options: {
@@ -57,7 +56,7 @@ module.exports = function(grunt) {
         },
         files: [{
           expand: true,
-          cwd: 'images',
+          cwd: 'src/images',
           src: ['*.{png,jpg,jpeg,gif}'],
           dest: 'dist/images'
         }]
@@ -70,7 +69,7 @@ module.exports = function(grunt) {
           port: 21,
           authKey: 'key'
         },
-        src: '/Users/richardlucas/Projects/rangeandroam-website/dist/',
+        src: '/Users/richardlucas/p/rangeandroam-website/dist/',
         dest: '/var/www/html/',
       }
     },
@@ -111,8 +110,6 @@ module.exports = function(grunt) {
     'usemin',
     'imagemin'
   ]);
-
-  grunt.registerTask('deploy', ['build', 'ftp-deploy']);
 
   grunt.registerTask('default', ['build']);
 };

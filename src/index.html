@@ -11,17 +11,17 @@
     <title>Range & Roam</title>
 
     <!-- build:css css/vendor.min.css -->
-    <link rel="stylesheet" href="../bower_components/font-awesome/css/font-awesome.css">
-    <link rel="stylesheet" href="../bower_components/materialize/dist/css/materialize.css">
+    <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.css">
+    <link rel="stylesheet" href="../node_modules/materialize-css/dist/css/materialize.min.css">
     <!-- endbuild -->
 
     <!-- build:css css/main.min.css -->
-    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="css/main.css">
     <!-- endbuild -->
 
     <!-- build:js js/ie.min.js -->
-    <script src="../js/ie-emulation-modes-warning.js"></script>
-    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+    <script src="js/ie-emulation-modes-warning.js"></script>
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
     <!-- endbuild -->
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -32,7 +32,7 @@
   </head>
 
   <body>
-    <nav class="blue-grey" role="navigation">
+    <nav class="brown lighten-1" role="navigation">
       <div class="container">
         <div class="nav-wrapper">
           <a id="logo-container" href="#" class="brand-logo thin">Range & Roam</a>
@@ -43,26 +43,22 @@
         </div>
       </div>
     </nav>
-
     <div id="index-banner" class="parallax-container">
+      <div class="parallax"><img src="images/rr-logo-1.png" alt="Unsplashed background img 2"></div>
+    </div>
+    <div class="container">
       <div class="section no-pad-bot">
         <div class="container">
           <br><br>
-          <h1 class="header center black-text">Range & Roam</h1>
           <div class="row center">
-            <h5 class="header col s12 black-text light">Data Engineering and Analysis Consultants</h5>
+            <h5 class="header col s12 black-text light">Software Development, Data Engineering, and DevOps Consultants</h5>
           </div>
           <div class="row center">
             <a href="mailto:info@rangeandroam.com" class="btn-large waves-effect waves-light blue-grey">Contact Us <i class="mdi-content-send right"></i></a>
           </div>
-          <br><br>
-
         </div>
       </div>
-      <div class="parallax"><img src="images/flatirons.jpg" alt="Unsplashed background img 2"></div>
     </div>
-
-
     <div class="container">
       <div class="section">
 
@@ -74,7 +70,8 @@
               <h5 class="center">Development Team</h5>
               <p class="light">
                 The development team brings years of engineering and analysis experience. 
-                The team includes leaders in the tech community, focused on data engineering, and open source contributing.
+                The team includes leaders in the tech community, focused on high quality 
+                software engineering practices, best-in-class data engineering, and open source contribution.
               </p>
             </div>
           </div>
@@ -96,12 +93,12 @@
               <h2 class="center blue-grey-text"><i class="mdi-action-settings"></i></h2>
               <h5 class="center">Modern Web Development</h5>
 
-              <p class="light">Utilizes such modern engineering and analysis techniques:</p>
-              <ul class="bulleted">
-                <li class="light">Agile Methodology</li>
-                <li class="light">ETL Tools such as Kafka, Airflow Postgres/MySQL, MongoDB, Redis, LevelDB</li>
-                <li class="light">Machine Learning</li>
-                <li class="light">Cloud Deployment with Docker, Kubernetes, AWS/GCP/Azure</li>
+              <p class="light">Utilizes such modern engineering and best practices:</p>
+              <ul class="fa-ul">
+                <li><span class="fa-li"><i class="fa-solid fa-check-square"></i></span>Agile Methodology</li>
+                <li><span class="fa-li"><i class="fa-solid fa-check-square"></i></span>Tools such as Kafka, Argo, Postgres/MySQL, MongoDB, Redis, LevelDB</li>
+                <li><span class="fa-li"><i class="fa-solid fa-check-square"></i></span>Machine Learning</li>
+                <li><span class="fa-li"><i class="fa-solid fa-check-square"></i></span>Cloud Deployment with Docker, Kubernetes, AWS/GCP/Azure</li>
               </ul>
             </div>
           </div>
@@ -113,7 +110,7 @@
       <div class="section no-pad-bot">
         <div class="container">
           <div class="row center">
-            <h5 class="col s12 light add-text-border">Pipeline Engineering and Analysis from Inception to Deployment</h5>
+            <!-- <h5 class="col s12 light add-text-border">Pipeline Engineering and Analysis from Inception to Deployment</h5> -->
           </div>
         </div>
       </div>
@@ -128,24 +125,18 @@
             <h3><i class="mdi-content-send blue-grey-text"></i></h3>
             <h4>Contact Us</h4>
             <p class="light">Contact us: 
-              <a class="email-address" href="mailto:richard@rangeandroam.com">richard@rangeandroam.com</a>  -or- 
-              <a class="email-address" href="mailto:daniel@rangeandroam.com">daniel@rangeandroam.com</a>
+              <a class="email-address" href="mailto:richard@rangeandroam.com">richard@rangeandroam.com</a>
             </p>
             <div>
               <ul class="icons">
                 <li>
                   <a href="https://github.com/ralucas" target="_blank">
-                    <i class="fa fa-github fa-3x"></i>
-                  </a>
-                </li>
-                <li>
-                  <a href="https://twitter.com/r_a_lucas" target="_blank">
-                    <i class="fa fa-twitter fa-3x"></i>
+                    <i class="fa-brands fa-github fa-3x"></i>
                   </a>
                 </li>
                 <li>
                   <a href="http://www.linkedin.com/in/richardalucas" target="_blank">
-                    <i class="fa fa-linkedin fa-3x"></i>
+                    <i class="fa-brands fa-linkedin fa-3x"></i>
                   </a>
                 </li>
                 <li>
@@ -157,48 +148,46 @@
             </div>
           </div>
         </div>
-
       </div>
     </div>
-
-
     <div class="parallax-container valign-wrapper">
       <div class="section no-pad-bot">
         <div class="container">
           <div class="row center">
-            <h5 class="col s12 light white-text add-gray-shadow">Utilizing modern data processing and analysis technologies and techniques</h5>
+            <!-- <h5 class="col s12 light white-text add-gray-shadow">Utilizing modern data processing and analysis technologies and techniques</h5> -->
           </div>
         </div>
       </div>
       <div class="parallax"><img src="images/code.jpg" alt="Unsplashed background img 3"></div>
     </div>
-
-    <footer class="page-footer blue-grey">
+    <footer class="page-footer brown darken-2">
       <div class="container">
         <div class="row">
           <div class="col l6 s12">
             <h5 class="white-text center">Company Bio</h5>
             <p class="grey-text text-lighten-2">
-              Data Engineering and Analysis Consulting service firm. 
-              Utilizes modern ETL and analysis technologies and techniques, handling 
+              Software Development, Data Engineering, and DevOps Consulting service firm. 
+              Utilizes modern engineering, ETL, and deployment technologies and techniques, handling 
               all aspects of development, from conception and development to 
               deployment and continued product lifecycle management.
             </p>
           </div>
           <div class="col l6 s12 valign-wrapper logos">
+            <a class="valign logo" href="http://rangeandroam.com/#"><img src="images/go.png"></a>
             <a class="valign logo" href="http://rangeandroam.com/#"><img src="images/kafka.png"></a>
-            <a class="valign logo" href="http://rangeandroam.com/#"><img src="images/airflow.png"></a>
+            <a class="valign logo" href="http://rangeandroam.com/#"><img src="images/argo.png"></a>
             <a class="valign logo" href="http://rangeandroam.com/#"><img src="images/kubernetes.png"></a>
             <a class="valign logo" href="http://rangeandroam.com/#"><img src="images/mongo.png"></a>
             <a class="valign logo" href="http://rangeandroam.com/#"><img src="images/python.png"></a>
             <a class="valign logo" href="http://rangeandroam.com/#"><img src="images/java.png"></a>
             <a class="valign logo" href="http://rangeandroam.com/#"><img src="images/scala.png"></a>
             <a class="valign logo" href="http://rangeandroam.com/#"><img src="images/spark.png"></a>
+            <a class="valign logo" href="http://rangeandroam.com/#"><img src="images/docker.png"></a>
             <a class="valign logo" href="http://rangeandroam.com/#"><img src="images/nodejs-175.png"></a>
           </div>
         </div>
       </div>
-      <div class="footer-copyright">
+      <div class="footer-copyright brown darken-4">
         <div class="container">
         Made in Colorado with <i class="fa fa-heart red-text"></i> by <a class="brown-text text-lighten-3" href="#">Range & Roam</a>
         </div>
@@ -217,11 +206,11 @@
     </script>
     
     <!-- build:js js/vendor.min.js -->
-    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="../bower_components/materialize/dist/js/materialize.min.js"></script>
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/materialize-css/dist/js/materialize.js"></script>
     <!-- endbuild -->
     <!-- build:js js/main.min.js -->
-    <script src="../js/main.js"></script>
+    <script src="js/main.js"></script>
     <!-- endbuild -->
   </body>
 </html>
